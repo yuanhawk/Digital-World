@@ -1,1 +1,12 @@
-https://github.com/yuanhawk/Digital-World/tree/master/Python%20Project/Wk%206%20In%20Class%20Activities%20%2B%20Homework
+def binary_to_decimal(binstr):
+    value = 0
+    count = 0
+    for x in binstr:
+        count += 1
+        
+    for y in range(len(binstr)):
+        if binstr[y] == "1":
+            value += 2 ** (count - 1) 
+        count -= 1
+    
+    return value
