@@ -1,0 +1,64 @@
+Coordinate
+
+class Coordinate:
+	x = 3.2 # Attribute()
+	y = -1.5
+
+p1 = Coordinate() #Constructor
+
+class Point:
+	def __init__(self, initX, initY):	#Constructor, function within a class is declared using __name__
+		self.x = initX			#'Self' keyword to denote instance of self
+		self.y = initY
+
+	def getX(self):
+		return self.x
+
+	def getY(self):
+		return self.y
+
+p = Point(7,6)	#p, instance | Point, class, self is referring to p
+
+# Convert Class to String
+
+def __str__(self):	# Print an instance
+	return 'x =' + str(self.x) + ',y = ' + str(self.y)
+print(p1) instead of print(p1.x, p1.y)
+
+def __lt__(self, other):
+	#self < other
+	return (self.x < other.x) and (self.y < other.y)
+
+def __eq__(self, other):
+def __add__(self, other):
+def __sub__(self, other):
+def __mul__(self, other):
+
+property(setter, getter)
+
+def __call__(self, other): # makes instance callable
+	rel = a * self.x + b * self.y + c
+
+__init__: Class 	Coordinate(x,y)
+__call__: Instance	Coordinate()
+
+__name__ makes it private
+_name_ makes it protected
+
+Inheritance
+
+method resolution order
+
+class Developer(Employee):
+
+Object
+	Employee (obj)
+		Developer (obj)
+			>Attributes
+
+Methods inherited from the parent class
+
+Detect relationship obj, class
+
+isinstance(object, class) Whether an object is an instance of a class
+issubclass(class1, class2) Whether class1 is a subclass of class2
