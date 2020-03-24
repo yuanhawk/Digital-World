@@ -1,0 +1,26 @@
+Output is a function of the current input
+
+O = f(i)
+
+O_t = f(i_t, i_(t-1), i_(t-2) # all previous input, memory/history)
+
+I/P --> State / Memory --> O/P
+
+1) Output function
+2) Next state function
+
+button can be I (pressed) or 0 (not pressed)
+
+State transition Diagram
+
+O --> I
+Current State --> Next State
+
+
+Forward Process
+Input: press button
+Output: I
+
+Back Process
+Input: press button
+Output: 0

@@ -34,7 +34,7 @@ def __add__(self, other):
 def __sub__(self, other):
 def __mul__(self, other):
 
-property(setter, getter)
+property(setter, getter) # used to access getter and setter
 
 def __call__(self, other): # makes instance callable
 	rel = a * self.x + b * self.y + c
@@ -62,3 +62,17 @@ Detect relationship obj, class
 
 isinstance(object, class) Whether an object is an instance of a class
 issubclass(class1, class2) Whether class1 is a subclass of class2
+
+
+class Coordinate:
+
+init object instantiation
+def __init__(self, x, y):
+
+All class objects have: attributes & methods
+
+Property used to access attribute (using getter)
+Change value via setter
+
+Inheritance
+All the attributes of animals will be inherited by human, but human has more than just attributes
