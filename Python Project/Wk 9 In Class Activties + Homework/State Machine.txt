@@ -24,3 +24,18 @@ Output: I
 Back Process
 Input: press button
 Output: 0
+
+State Machines
+Object Oriented --> Inheritance
+
+SM - attributes
+   - methods --> start()
+	     --> step(inp)
+	     --> transduce()
+
+LB / CM accent --> start_state
+	       --> get_next_values(self, state, inp)
+	       --> next_state, output
+
+1. output f(i,s)
+2. nextstate function
