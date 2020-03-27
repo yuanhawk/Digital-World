@@ -39,3 +39,24 @@ LB / CM accent --> start_state
 
 1. output f(i,s)
 2. nextstate function
+
+Step
+1. Is it a state machine? O != f(i), O == f(i, s)
+2. What is the state?	--> What should be remembered
+3. Is the state finite?
+
+if True:
+	return state transition diagram
+	CS --> NS
+else:
+	return step table
+_____1__2__3__4__5__6__7__8__9_
+CS_____________________________
+I/P____________________________
+NS_____________________________
+O/P____________________________
+
+Checkoff
+1. Robot spiralling path
+2. Sensor range # Check range
+3. Do not cross boundary # Reach boundary and stop
