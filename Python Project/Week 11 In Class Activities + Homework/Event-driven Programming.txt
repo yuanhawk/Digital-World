@@ -1,0 +1,48 @@
+Wk 1-6: Procedural Programming, functions
+Wk 8: Object-oriented, custom data type
+Wk 9: Inheritance, state-machine, boundary followers
+Wk 10: Machine Learning, Data Science
+Wk 11: Event-Driven Programming + GUI
+
+Clicks are events
+
+Main Loop / Event Loop
+
+Start
+|		<--------
+Detect Events / Process	|
+|			|
+Close the main window 	F
+|	T
+End
+
+Event, call back
+On touch down, up, move
+
+KivyApp(App): # Inheritance from App class, AlternateApp
+
+def build() # Every app has a build def, build + return root widget
+	return root widget
+
+Widget Label
+Event <--> Callback, instance --> on_touch_move/ on_touch_down
+1. Widget.bind(event=callback)
+2. Widget instantiation
+Label(text=, event=callback)
+
+Start (run())
+|			<-
+Detect & Process	|
+|			|
+is Main Window Closed	| False
+|	True
+End
+
+Layout is also widget
+Label, Text Input, Button
+
+Layout (Gridlayout)
+label
+txt input
+lbl
+txt_years
