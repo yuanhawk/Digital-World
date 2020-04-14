@@ -1,0 +1,10 @@
+		Predicted bird	Predicted cat
+Actual bird	3		1
+Actual cat	2		2
+
+5 records were predicted correctly
+3 records were predicted wrongly
+1 'bird' and 2 'cat' were wrongly classified
+        Predicted 0 Predicted 1
+Actual 0    7           3
+Actual 1    5           5

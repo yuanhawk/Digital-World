@@ -1,0 +1,241 @@
+Import numpy as np
+
+matrix1 = [[0,1], [2,3]]
+type = 'list'
+matrix2 = np.array([0,1], [2,3])
+type = 'numpy.ndarray'
+
+Numpy arrays offer more tools for matrix computation
+Numpy can identify oddly-shaped matrices from the start
+Many methods from lists can be reused but the numpy list
+
+Numpy generation
+Numy arrays can be generated in multiple ways
+np.array([0,1],[2,3])
+[[0 1]
+ [2 3]]
+We can generate matrices by specifiying dimension
+
+np.zeros([2,2])
+[[0, 0]
+ [0, 0]]
+
+np.eye(3)
+[[1, 0, 0]
+ [0, 1, 0]
+ [0, 0, 1]]
+
+linspace(0, 10, 5) #start, end, no. of pt
+
+Numpy arrays are custom objects with some attributes.
+Interesting attributes:
+shape - contains a tuple, with the no. of rows and cols of the matrix
+size - an integer of elements in the numpy array
+
+Numpy operator addition
+[[0 1]
+ [1 0]]
+[[0 2]
+ [1 -1]]
+matrix1 + matrix 2
+[[0 3]
+ [2 -1]]
+
+matrix multiplication
+np.dot(m1, m2)
+
+Able to perform indexing with successive brackets, can use bracket and comma notation on Numpy arrays
+Able to perform slicing
+
+elements = matrix[index, :] # Getting a whole line
+elements = matrix[:, index] # Getting a whole col
+Select all elements using :
+
+Reshape into 1D array using flattening
+np.reshape(matrix, [1,6])
+[[0 1 2]
+ [3 4 5]]
+[[0 1 2 3 4 5]] # or np.reshape(matrix, [1, matrix.size])
+# matrix.shape[] (row, col)
+
+np.transpose(matrix)
+[[0 3]
+ [1 4]
+ [2 5]]
+
+np.linalg.eig(matrix)
+Machine Learning problem
+
+Linear system solving
+3 x[0] + x[1] = 9
+x[0] + 2 x[1] = 8
+A = np.array[[3,1], [1,2]]
+B = np.array([9,8])
+x = np.linalg.solve(A, B)
+
+
+matrix = np.array([[0, 1, 2], [3, 4, 5]])
+np.reshape(matrix, [_, _])
+
+import random
+nested_list = [random.random() for i in range(5)]
+matrix = np.array([nexted_list])
+print(matrix.shape)
+
+np.mean(matrix), max(matrix), median(matrix), min(matrix), percentile(matrix, n)
+
+np.sort(matrix) - smallest to highest
+
+five_number_summary = {'min': 0, 'median': 0, 'max': 0}
+five_number_summary['min'] = np.min(matrix)
+
+#box plot
+
+Gaussian distribution
+Scatter Plot
+Histogram Plot
+Visualise the distribution of the apartments you have in your record
+
+Linear regression: core idea
+Linear regressions is a typical example of a data science problem, where
+we look for a function that connects inputs and outputs in our data.
+
+Input x --> Function --> Output y
+
+Hypothesis: in the linear regression model
+We define the 'best' as to be the closest fit
+
+[1,2,3,4, ...]
+Data
+
+a_3 * x**4 + a_2 * x**3 + c * x**2
+
+Objective: We want to use the data in our record/experience to find the best function to fit our data.
+
+General rule of data science: do not test the accuracy of the function/model on the same samples you
+used to calculate the function in the first place.
+
+Train and test samples example
+Split your data into training and testing sets
+Training samples: samples used to decide on which function to use
+
+Split your data into training and testing sets.
+Training samples: samples used to decide on which function to use.
+Test samples: samples used to measure the accuracy of your proposed solution.
+
+train_test_split(x, y, train_size=0.*, test_size=0.*, random_state=*)
+random_state - np.random
+x_train, x_test, y_train, y_test = train_test_split(x_data, \y_data, \test_size = percentage_for_test, \random_state = random_seed)
+
+Train Linear Regression Model
+
+Performance Metrics for Regression
+Means Square Error (MSE)
+The closer it gets to zero, the better the function is
+R2 score (R2)
+The closer it gets to 1, the better the function is
+
+Distance to best fit line
+E_0 = (f(x_0) - y_0) ** 2
+
+MSE = sqrt((sum(E_0)) ** 2 / n)
+
+Step 1: Load data, and use a scatter plot, to check your data
+(Continuous data? Lin regression, Categorical data? K-NN, K-Nearest Neighbour)
+Step 2: Use the train_test_split, to split record/experience into
+training(x_train, y_train) and testing (x_test, y_test) samples randomly
+Step 3: Use the linear regression model from sklearn, and compute the
+function coefficients, which have the optimal MSE and R2 performance.
+Step 4: Predict your samples using this function on your x_test samples
+and store it in y_pred
+Step 5: Compute the MSE and R2 by using y_pred and y_test
+Step 6: Display your final results
+
+Import sklearn
+
+Range - used for python num
+Numpy - numerical computation, used for plotting, create linear space, create a grid
+
+Features
+Record
+Target
+
+Supervised learning
+
+Train set - model, cannot use the same set of data to train and test, bias
+Test set - check model
+
+Randonly set data to prevent bias
+
+Data used from the training set
+Check model using test set (R2 & MSE)
+
+train_features, test_features, train_target, test_target = tts(features, target) # Split
+x_train, x_test, y_train, y_test, = tts(x, y, test_size = 0.4, random_state = seed)
+
+Polynomial regression
+Hypothesis: in the polynomial regression approach, we assume that the
+missing function is f a function
+
+Polynomial feature function
+
+# Use Polynomial Features
+poly = PolynomialFeatures(order, include_bias=False)
+
+# split the data set
+c_train, c_test, y_train, y_test = train_test_split(c, y, test_size=size, random_state=seed)
+
+#Do linear regression
+regr = linear_model.LinearRegression()
+regr.fit(c._train, y_train)
+y_pred = regr.predict(c_test)
+
+# Evaluation with mse and r2
+mse = mean_squared_error(y_test, y_pred)
+var = r2_score(y_test, y_pred)
+
+Classification: core idea
+
+Input x (features) --> Function (y = f(x)) --> Output y (text label)
+
+1. Scatter plot, formation of clusters
+K Nearest Neighbours (K-NN) classification algorithm
+If k is too small, there may be biases
+If k is too large, the point may not be determined as the number of points included is too large
+
+x = normalise_minmax(x)
+
+#KNN classifier object and fit
+clf = neighbours.KNeighborsClassifier(k) #k: hyper parameter, # layers, length steps
+clf.fit(x_train, y_train)
+
+#Use predict on our x_test
+y_pred = clf.predict(x_test)
+
+return results, clf
+
+Improving our KNN
+How can we decided which value of K is better
+
+Split the record in 3 sets
+Training samples (60%)
+validation samples (20%)
+Testing samples (20%)
+
+Hyperparameter tuning vs model training
+Linear regression
+K-NN requires hyperparameter tuning
+
+We run the our KNN classifer function on the same training data, for
+mulitple values of K
+And store the accuracy results in a list (one element for each K), by using
+the validation datat for performance evalutation.
+
+Finally, return a dictionary, with the best K value, K*
+The accuracy results on the valiation samples and on the testing samples
+
+# split dataset
+data_train, data_part2, target_train, target_part2 = train_test_split(data
+data_validation, data_test, target_validation, target_test = train_test_split(
+
+
