@@ -1,0 +1,24 @@
+# Sprite widget, rule
+<Sprite>
+    bgcolor: 1,1,1,1
+    size_hint: None, None
+    size: [app.sprite_size] * 2 # static size 2x sprite size
+    pos: [x * app.sprite_size for x in self.coord] # list comprehension of sprite_size
+    canvas:
+        Color
+            rgba: self.bgcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Fruit>
+    bgcolor: 0,1,0,1
+
+# main root widget, flush screen red when dead
+RelativeLayout
+    canvas:
+        Color
+            rgba: 1,0,0,app.alpha
+        Rectangle:
+            pos: self.pos
+            size: self.size
