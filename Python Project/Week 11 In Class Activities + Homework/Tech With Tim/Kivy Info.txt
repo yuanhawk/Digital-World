@@ -1,0 +1,10 @@
+1. Type of Layout - GridLayout, FloatLayout, BoxLayout
+2. App
+3. Widget
+4. Button
+5. Label, TextInput
+6. Properties - ObjectProperty
+7. Graphics - Drawing
+8. Builder
+9. Screenmanager
+10. Popup
